@@ -1,11 +1,50 @@
 <!DOCTYPE html>
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>Hello!</title>
-</head>
-<body>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="octicons-4.3.0/build/font/octicons.css" rel="stylesheet">
+<link href="customStyles.css" rel="stylesheet">
+<link rel="shortcut icon" type="image/png" href="jasmine/lib/jasmine-2.8.0/jasmine_favicon.png">
+<link rel="stylesheet" type="text/css" href="jasmine/lib/jasmine-2.8.0/jasmine.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
 
-<h1>Hello!</h1>
+</head>
+
+<body style="background-color:#eaeae1;">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="jasmine/lib/jasmine-2.8.0/jasmine.js"></script>
+<script type="text/javascript" src="jasmine/lib/jasmine-2.8.0/jasmine-html.js"></script>
+<script type="text/javascript" src="jasmine/lib/jasmine-2.8.0/boot.js"></script>
+
+<div class="container"><div class="row">
+  <div class="col-md-3 col-sm-2 col-xs-1"></div>
+  <div class="col-md-6 col-sm-8 col-xs-10 custom-box-layout" id="display-box">
+    <div style="display:inline">
+    <input type="text" class="custom-input-field" id="username" name="username" placeholder="Search username..." value="">
+    <input type="button" class="btn btn-default custom-submit-button" id="submit" value="Search"></div>
+    <div id="error-message"></div>
+
+    <table class="table custom-user-info-table" id="display-user-info">
+      <tr>
+        <td id="user-avatar" rowspan="3" style="width:40%;"></td>
+        <td id="user-login" style="font-style: italic"></td>
+      </tr>
+      <tr><td id="user-name" style="font-weight: bold; font-size: 160%"></td></tr>
+      <tr><td id="user-bio"></td></tr>
+    </table>
+
+    <table class="table custom-user-repo-table" id="display-user-repos">
+      <thead><tr><th id="head-title" colspan="3"></th></tr></thead>
+    </table>
+  </div>
+  <div class="col-md-3 col-sm-2 col-xs-1"></div>
+</div></div>
+<script src="onclickFunctions.js"></script>
+<script src="main.js"></script>
 </body>
 </html>

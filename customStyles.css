@@ -1,0 +1,51 @@
+.custom-box-layout {
+    background-color: white;
+    margin: 10% auto auto auto;
+    border-radius: 25px;
+    box-shadow: 5px 5px 5px #888888;
+}
+.custom-user-info-table {
+    display: inline-block;
+    word-break: break-word;
+    table-layout: fixed;
+}
+.custom-user-repo-table {
+    word-break: break-word;
+}
+@media (min-width: 385px) {
+	.custom-submit-button {
+		border: 1px solid lightgrey;
+		font-weight: bold;
+		margin: 4% 2% 1% auto;
+		float: right;
+		background-color: #f5f5f5;
+	}
+	.custom-input-field {
+		margin: 5% auto 2% 3%;
+		width:70%;
+	}
+}
+@media (max-width: 384px) {
+	.custom-submit-button {
+		border: 1px solid lightgrey;
+		font-weight: bold;
+		margin: auto;
+		background-color: #f5f5f5;
+	}
+	.custom-input-field {
+		margin: 5% auto auto auto;
+		width:auto;
+	}
+}
+#head-title {
+	font-weight: bold;
+	font-size: 150%;
+	border-bottom: 2px solid black;
+}
+td:empty,
+th:empty,
+#error-message:empty,
+#display-user-info:empty,
+#display-user-repos:empty {
+    display: none;
+}
