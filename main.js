@@ -23,7 +23,7 @@ function displayUserInfo(username) {
             user_avatar = "";
         } else {
             var avatar_url = responseUserInfo.avatar_url;
-            user_avatar= '<img src = \"' + avatar_url + '\" style= \"display:block; width:100%; height:auto;\">';
+            user_avatar= '<img src=\"' + avatar_url + '\" style= \"display:block; width:100%; height:auto;\">';
         }
         //fill in user information in table
         display_user_info_table.rows[0].cells[0].innerHTML = user_avatar;
@@ -44,17 +44,17 @@ function displayUserRepos(username) {
     responseUserRepos = makeRequestForUserRepos(username).
     then(function (responseUserRepos) {
         var numberRepos = responseUserRepos.length;
-        document.getElementById("head-title").innerHTML = "Repositories";
+        document.getElementById("repo-table-head").innerHTML = "Repositories";
         
         for (var i = 0; i < numberRepos; i++) {
             var row = display_user_repos_table.insertRow(i+1);
             var cellNameRepo = row.insertCell(0);
             cellNameRepo.innerHTML = responseUserRepos[i].name;
-            cellNameRepo.style = "min-width:60%";
+            cellNameRepo.style = "min-width:70%";
             var cellStar = row.insertCell(1);
-            cellStar.innerHTML = '<span class="octicon octicon-star"></span>' + responseUserRepos[i].stargazers_count;
+            cellStar.innerHTML = '<span class="octicon octicon-star">' + responseUserRepos[i].stargazers_count + '</span>';
             var cellFork = row.insertCell(2);
-            cellFork.innerHTML = '<span class="octicon octicon-repo-forked"></span>' + responseUserRepos[i].forks_count;
+            cellFork.innerHTML = '<span class="octicon octicon-repo-forked">' + responseUserRepos[i].forks_count + '</span>' ;
         }
     })
     .catch(function (err) {
@@ -141,7 +141,7 @@ function clearDataFromPage() {
 
     //clear repositories' information
     var display_user_repos_table = document.getElementById("display-user-repos");
-    document.getElementById("head-title").innerHTML = "";
+    document.getElementById("repo-table-head").innerHTML = "";
     while(display_user_repos_table.rows.length > 1) {
         display_user_repos_table.deleteRow(1);
     } 

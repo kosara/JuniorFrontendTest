@@ -46,6 +46,8 @@ td:empty,
 th:empty,
 #error-message:empty,
 #display-user-info:empty,
-#display-user-repos:empty {
+#display-user-repos:empty,
+#repo-table-head:empty,
+#repo-table-body:empty {
     display: none;
 }
