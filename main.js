@@ -23,7 +23,7 @@ function displayUserInfo(username) {
             user_avatar = "";
         } else {
             var avatar_url = responseUserInfo.avatar_url;
-            user_avatar= '<img src=\"' + avatar_url + '\" style= \"display:block; width:100%; height:auto;\">';
+            user_avatar= '<img style= \"display:block; width:100%; height:auto;\" src=\"' + avatar_url + '\">';
         }
         //fill in user information in table
         display_user_info_table.rows[0].cells[0].innerHTML = user_avatar;
