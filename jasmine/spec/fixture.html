@@ -6,30 +6,25 @@
 <body style="background-color:#eaeae1;">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
-<div class="container"><div class="row">
-  <div class="col-md-3 col-sm-2 col-xs-1"></div>
-  <div class="col-md-6 col-sm-8 col-xs-10 custom-box-layout" id="display-box">
-    <div style="display:inline">
-    <input type="text" class="custom-input-field" id="username" name="username" placeholder="Search username..." value="">
-    <input type="button" class="btn btn-default custom-submit-button" id="submit" value="Search"></div>
-    <div id="error-message"></div>
 
-    <table class="table custom-user-info-table" id="display-user-info">
-      <tr>
-        <td id="user-avatar" rowspan="3" style="width:40%;"></td>
-        <td id="user-login" style="font-style: italic"></td>
-      </tr>
-      <tr><td id="user-name" style="font-weight: bold; font-size: 160%"></td></tr>
-      <tr><td id="user-bio"></td></tr>
-    </table>
+<input type="text" id="username" name="username" placeholder="Search username..." value="" />
+<input type="button" id="submit" value="Search" /></div>
+<div id="error-message"></div>
 
-    <table class="table custom-user-repo-table" id="display-user-repos">
-      <thead><tr><th id="repo-table-head" colspan="3"></th></tr></thead>
-      <tbody id="repo-table-body"></tbody>
-    </table>
-  </div>
-  <div class="col-md-3 col-sm-2 col-xs-1"></div>
-</div></div>
+<table class="table" id="display-user-info">
+  <tr>
+    <td id="user-avatar"></td>
+    <td id="user-login"></td>
+  </tr>
+  <tr><td id="user-name"></td></tr>
+  <tr><td id="user-bio"></td></tr>
+</table>
+
+<table class="table" id="display-user-repos">
+  <thead><tr><th id="repo-table-head"></th></tr></thead>
+  <tbody id="repo-table-body"></tbody>
+</table>
+
 <script src="onclickFunctions.js"></script>
 <script src="main.js"></script>
 

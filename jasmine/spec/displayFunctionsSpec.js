@@ -27,7 +27,7 @@ describe( "Displaying Functions:", function() {
 
 			it("fills in the right user information in the table", function(done) {
 				var mocked_user_info_table = document.getElementById("display-user-info");
-	       		expect(mocked_user_info_table.rows[0].cells[0].innerHTML).toEqual('<img src=\"https://avatars2.githubusercontent.com/u/5045714?v=4\" style=\"display:block; width:100%; height:auto;\">');
+	       		expect(mocked_user_info_table.rows[0].cells[0].innerHTML).toEqual('<img style=\"display:block; width:100%; height:auto;\" src=\"https://avatars2.githubusercontent.com/u/5045714?v=4\">');
 	    		expect(mocked_user_info_table.rows[0].cells[1].innerHTML).toEqual('@syahdeini');
 	    		expect(mocked_user_info_table.rows[1].cells[0].innerHTML).toEqual('Aldy syahdeini');
 	    		expect(mocked_user_info_table.rows[2].cells[0].innerHTML).toEqual('Machine learning and NLP enthusiast ');
